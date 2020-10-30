@@ -27,12 +27,14 @@ public class ExerciseAppApplication {
 
   @GetMapping("/hello")
   public String hello(@RequestParam(value="name", defaultValue="World") String name){
-    return String.format("Assalamu A\'laikum wa Rahmatullahi wa Barakatuhu, %s", name);
+    PageMessage helloMessage = new Hello();
+    return helloMessage.getMessage(name);
   }
 
   @GetMapping("/football")
   public String football(){
-    return String.format("Now is time to play football for half an hour!");
+    PageMessage footballMessage = new Football();
+    return footballMessage.getMessage("");
   }
 
 }
