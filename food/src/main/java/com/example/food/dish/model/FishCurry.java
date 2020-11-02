@@ -5,10 +5,10 @@ import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
 @Component
-@Qualifier("BeefCurry")
-public class BeefCurry implements Dish {
+@Qualifier("FishCurry")
+public class FishCurry implements Dish {
     @Override
     public String getDish() {
-        return "Delicious beef curry here.";
+        return "Fish curry in Bangladeshi style.";
     }
 }
